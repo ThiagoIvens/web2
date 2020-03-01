@@ -12,12 +12,12 @@ import sys
 
 ## Loops
 
-# i = 1
-#
-# # While
-# while (i <= 10):
-# 	print(i)
-# 	i += 1
+i = 1
+
+# While
+while (i <= 10):
+	print(i)
+	i += 1
 
 # Aborta o script
 sys.exit(0)
@@ -54,9 +54,35 @@ for i in cubes:
 cubes = [i ** 3 for i in range(10) if i % 2 == 0]
 # cubes = [i ** 3 for i in range(0, 10, 2)]
 
-print('Cubes dos numeros pares:')
+print('Cubos dos numeros pares:')
 for i in cubes:
 	print(i)
+
+## Clausula ELSE !!!
+
+# Suponha que voce queira iterar em uma lista de elementos até encontrar uma determinada condicao,
+# apos isso, voce pode encerrar a execucao do loop usando o break.
+# Caso nenhum elemento se encaixe na condicao voce precisa executar uma acao,
+# por exemplo: gerar um log, enviar uma mensagem/email, etc.
+# Esse problema pode resolvido com a utilizacao de uma flag boolena, por exemplo;
+# porem, em python temos a opcao de usar a clausa else
+
+# percorre uma lista e imprime se encontrou, ou nao, o elemento 6
+for i in range(999):
+	if i == 6:
+		print('Elemento 6 encontrado na lista')
+else:
+	print('O elemento 6 NAO foi encontrado na lista')
+
+# Encontra os fatores de um numero entre 2 e 10
+for n in range(2, 10):
+	for x in range(2, n):
+		if n % x == 0:
+			print( n, ' = ', x, '*', n/x)
+			break
+	else:
+		# Se nao encontrou um fator
+		print(n, 'eh numero primo')
 
 
 ###
@@ -73,4 +99,5 @@ for i in cubes:
 ## usando a string: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 # 4) Conte quantas palavras de tamanho >= 5 existe nessa string
 
-# 3) Usando list comprehension, crie uma lista com os multiplos de 3 de 0 ate 100
+# 5) Usando list comprehension, crie uma lista com os multiplos de 3 de 0 ate 100
+# Faca uma funcao para encontrar os numeros primos no intervalo [2, 10), mas nao utilize a clausula else do for
