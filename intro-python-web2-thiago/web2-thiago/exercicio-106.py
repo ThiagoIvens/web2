@@ -33,7 +33,6 @@ Retorna True se a capital do estado de origem existe no arquivo capitais-BR.csv 
 Keyword arguments:
 state -- O estado de origem do professor
 '''
-pass
 
 
 # 2) Remova do arquivo capitais-BR.csv todas capitais dos estados do sudeste e teste se sua funcao estah robusta o suficiente.
